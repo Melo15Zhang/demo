@@ -1,0 +1,21 @@
+server:
+  port: 8010
+  sessionTimeout: 15
+  tomcat:
+    max-threads: 800
+    uri-encoding: UTF-8
+
+spring:
+  application:
+    name: eurekaserverprovider
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://root:melo@localhost:8001/eureka/
+
+db:
+  product:
+    url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=utf8
+    username: root
+    password: zxcv123

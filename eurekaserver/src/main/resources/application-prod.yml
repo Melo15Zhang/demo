@@ -1,0 +1,24 @@
+server:
+  port: 8001
+  sessionTimeout: 15
+  tomcat:
+    max-threads: 800
+    uri-encoding: UTF-8
+
+spring:
+  application:
+    name: eurekaServer
+
+security:
+  basic:
+    enabled: true
+  user:
+    name: root
+    password: melo
+
+eureka:
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://root:melo@localhost:8001/eureka/

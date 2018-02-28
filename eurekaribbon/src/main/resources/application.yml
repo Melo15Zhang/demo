@@ -1,0 +1,19 @@
+server:
+  port: 8180
+  sessionTimeout: 15
+  tomcat:
+    max-threads: 800
+    uri-encoding: UTF-8
+
+spring:
+  application:
+    name: serviceRibbon
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://root:melo@localhost:8001/eureka/
+
+EUREKASERVERPROVIDER:
+  ribbon:
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule

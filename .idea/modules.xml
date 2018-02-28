@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/demo.iml" filepath="$PROJECT_DIR$/.idea/modules/demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/eurekaclient.iml" filepath="$PROJECT_DIR$/.idea/modules/eurekaclient.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/eurekaclient_main.iml" filepath="$PROJECT_DIR$/.idea/modules/eurekaclient_main.iml" group="eurekaclient" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/eurekaclient_test.iml" filepath="$PROJECT_DIR$/.idea/modules/eurekaclient_test.iml" group="eurekaclient" />
+      <module fileurl="file://$PROJECT_DIR$/eurekafeign/eurekafeign.iml" filepath="$PROJECT_DIR$/eurekafeign/eurekafeign.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/eurekafeign_main.iml" filepath="$PROJECT_DIR$/.idea/modules/eurekafeign_main.iml" group="eurekafeign" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/eurekafeign_test.iml" filepath="$PROJECT_DIR$/.idea/modules/eurekafeign_test.iml" group="eurekafeign" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/eurekaribbon.iml" filepath="$PROJECT_DIR$/.idea/modules/eurekaribbon.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/eurekaribbon_main.iml" filepath="$PROJECT_DIR$/.idea/modules/eurekaribbon_main.iml" group="eurekaribbon" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/eurekaribbon_test.iml" filepath="$PROJECT_DIR$/.idea/modules/eurekaribbon_test.iml" group="eurekaribbon" />
+      <module fileurl="file://$PROJECT_DIR$/eurekaserver/eurekaserver.iml" filepath="$PROJECT_DIR$/eurekaserver/eurekaserver.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/eurekaserver_main.iml" filepath="$PROJECT_DIR$/.idea/modules/eurekaserver_main.iml" group="eurekaserver" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/eurekaserver_test.iml" filepath="$PROJECT_DIR$/.idea/modules/eurekaserver_test.iml" group="eurekaserver" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/hystrix.iml" filepath="$PROJECT_DIR$/.idea/modules/hystrix.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/hystrix_main.iml" filepath="$PROJECT_DIR$/.idea/modules/hystrix_main.iml" group="hystrix" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/hystrix_test.iml" filepath="$PROJECT_DIR$/.idea/modules/hystrix_test.iml" group="hystrix" />
+      <module fileurl="file://$PROJECT_DIR$/task/task.iml" filepath="$PROJECT_DIR$/task/task.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/task_main.iml" filepath="$PROJECT_DIR$/.idea/modules/task_main.iml" group="task" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/task_test.iml" filepath="$PROJECT_DIR$/.idea/modules/task_test.iml" group="task" />
+      <module fileurl="file://$PROJECT_DIR$/zuul/zuul.iml" filepath="$PROJECT_DIR$/zuul/zuul.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/zuul_main.iml" filepath="$PROJECT_DIR$/.idea/modules/zuul_main.iml" group="zuul" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/zuul_test.iml" filepath="$PROJECT_DIR$/.idea/modules/zuul_test.iml" group="zuul" />
+    </modules>
+  </component>
+</project>
