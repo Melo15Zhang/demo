@@ -16,7 +16,6 @@ public class ResultFactory {
         if(result == null){
             result = new Result(code);
             resultMap.put(code,result);
-            System.out.println("Create code = " + code + " result");
         }
         return result;
     }

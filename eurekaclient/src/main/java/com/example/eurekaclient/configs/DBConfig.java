@@ -9,11 +9,10 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
-
 import javax.sql.DataSource;
 
 /**
- * 产品库的数据库连接配置。
+ * 数据库连接配置。
  */
 @Configuration
 @ConfigurationProperties(prefix = "db.product")
@@ -29,7 +28,7 @@ public class DBConfig {
     private String password;
 
     /**
-     * 产品库的连接配置。
+     * 连接配置。
      *
      * @return
      */
@@ -49,7 +48,7 @@ public class DBConfig {
     }
 
     /**
-     * 产品库的事务管理器。
+     * 事务管理器。
      *
      * @return
      */
