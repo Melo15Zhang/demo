@@ -15,7 +15,6 @@ import java.util.List;
 @SpringBootTest
 @ActiveProfiles(value = "dev")
 public class EurekaclientApplicationTests {
-
 	@Autowired
 	StudentMapper studentMapper;
 
@@ -23,22 +22,24 @@ public class EurekaclientApplicationTests {
 	public void test() {
 		StudentDto studentDto = new StudentDto();
 		studentDto.setSubjects(20);
-		studentDto.setName("test_1");
+		studentDto.setName("test");
 
 		StudentDto studentDto_1 = new StudentDto();
 		studentDto_1.setSubjects(30);
-		studentDto_1.setName("test_2");
+		studentDto_1.setName("test1");
 
 		List<StudentDto> list = new ArrayList<>();
 		list.add(studentDto);
 		list.add(studentDto_1);
-		// batchInsert
+
+
 		studentMapper.batchInsert(list);
-		// update
-		studentMapper.update(2L,50);
-		// delete
+
+		studentMapper.update(2L,30);
+
 		List<Long> ids = new ArrayList<>();
 		ids.add(2L);
 		studentMapper.delete(ids);
 	}
+
 }
