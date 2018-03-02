@@ -16,6 +16,10 @@ eureka:
 
 db:
   product:
-    url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=utf8
-    username: root
+    url: jdbc:mysql://localhost:3306/dev_erp?useUnicode=true&characterEncoding=utf8
+    username: dev_user
     password: zxcv123
+
+config:
+  redisServer:
+    - 127.0.0.1:6380

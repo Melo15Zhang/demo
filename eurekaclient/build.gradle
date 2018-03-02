@@ -30,11 +30,12 @@ ext {
 dependencies {
 	compile 'com.alibaba:druid:1.0.26'
 	compile 'org.mybatis.spring.boot:mybatis-spring-boot-starter:1.2.0'
-	compile('org.springframework.boot:spring-boot-starter-validation')
+	compile 'org.springframework.boot:spring-boot-starter-validation'
 	compile 'com.alibaba:fastjson:1.2.32'
+	compile 'org.springframework.boot:spring-boot-starter-data-redis'
 	compile "org.springframework.boot:spring-boot-starter-web:$springBootVersion"
-	compile('org.springframework.cloud:spring-cloud-starter-eureka-server')
-	runtime('mysql:mysql-connector-java:5.1.24')
+	compile 'org.springframework.cloud:spring-cloud-starter-eureka-server'
+	runtime ('mysql:mysql-connector-java:5.1.24')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 }
 

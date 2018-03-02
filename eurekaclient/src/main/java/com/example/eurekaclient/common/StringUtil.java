@@ -39,6 +39,40 @@ public class StringUtil {
     }
 
     /**
+     * 获取int值
+     *
+     * @param obj
+     * @return
+     */
+    public static int getIntValue(Object obj) {
+        int def = 0;
+        if (obj != null) {
+            try {
+                def = Integer.parseInt(obj == null ? "" : obj.toString());
+            } catch (Exception ex) {
+            }
+        }
+        return def;
+    }
+
+    /**
+     * 获取int值
+     *
+     * @param obj
+     * @return
+     */
+    public static String getString(Object obj) {
+        String def = null;
+        if (obj != null) {
+            try {
+                def = obj.toString();
+            } catch (Exception ex) {
+            }
+        }
+        return def;
+    }
+
+    /**
      * 获取UUID字符串
      *
      * @return
