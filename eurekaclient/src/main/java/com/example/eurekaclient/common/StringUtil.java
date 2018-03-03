@@ -77,7 +77,7 @@ public class StringUtil {
      *
      * @return
      */
-    public static String getTaskId() {
+    public static String getUUID() {
         return UUID.randomUUID().toString();
     }
 }

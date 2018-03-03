@@ -20,6 +20,10 @@ public class RedisClient {
 
     private JedisCluster defaultClient = null;
 
+    private static final String GET = "get";
+    private static final String SET = "set";
+    private static final String DEL = "del";
+    private static final String SET_EXPIRE = "serex";
     /**
      * 将对象序列化成json字符串,存入缓存。
      *
@@ -93,7 +97,7 @@ public class RedisClient {
      * @return
      */
     public String set(String key, String value) {
-        return execute("set", new String[]{key, value});
+        return execute(SET, new String[]{key, value});
     }
 
     /**
@@ -105,7 +109,7 @@ public class RedisClient {
      * @return
      */
     public String set(String key, String value, int second) {
-        return execute("setex", new String[]{key, String.valueOf(second), value});
+        return execute(SET_EXPIRE, new String[]{key, String.valueOf(second), value});
     }
 
     /**
@@ -115,7 +119,7 @@ public class RedisClient {
      * @return
      */
     public String get(String key) {
-        return execute("get", new String[]{key});
+        return execute(GET, new String[]{key});
     }
 
     /**
@@ -125,7 +129,7 @@ public class RedisClient {
      * @return 0-失败,大于0-成功。
      */
     public int delete(String key) {
-        return StringUtil.getIntValue(execute("del", new String[]{key}));
+        return StringUtil.getIntValue(execute(DEL, new String[]{key}));
     }
 
     /**
@@ -137,13 +141,13 @@ public class RedisClient {
      */
     private String execute(String method, String[] args) {
         try {
-            if ("set".equals(method)) {
+            if (SET.equals(method)) {
                 return getDefaultClient().set(args[0], args[1]);
-            } else if ("get".equals(method)) {
+            } else if (GET.equals(method)) {
                 return getDefaultClient().get(args[0]);
-            } else if ("setex".equals(method)) {
+            } else if (SET_EXPIRE.equals(method)) {
                 return getDefaultClient().setex(args[0], Integer.parseInt(args[1]), args[2]);
-            } else if ("del".equals(method)) {
+            } else if (DEL.equals(method)) {
                 return StringUtil.getString(getDefaultClient().del(args[0]));
             }
         } catch (Exception e) {
