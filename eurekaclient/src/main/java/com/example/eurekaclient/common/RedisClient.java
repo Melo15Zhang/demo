@@ -70,6 +70,17 @@ public class RedisClient {
     }
 
     /**
+     * 缓存字符串,不过期。
+     *
+     * @param key
+     * @param value
+     * @return
+     */
+    public String set(String key, String value) {
+        return execute(SET, new String[]{key, value});
+    }
+
+    /**
      * 获取指定key和class的valueList。
      *
      * @param key
@@ -87,17 +98,6 @@ public class RedisClient {
         } catch (Exception ex) {
         }
         return null;
-    }
-
-    /**
-     * 缓存字符串,不过期。
-     *
-     * @param key
-     * @param value
-     * @return
-     */
-    public String set(String key, String value) {
-        return execute(SET, new String[]{key, value});
     }
 
     /**
