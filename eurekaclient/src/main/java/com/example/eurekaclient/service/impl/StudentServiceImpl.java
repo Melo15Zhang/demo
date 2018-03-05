@@ -1,6 +1,5 @@
 package com.example.eurekaclient.service.impl;
 
-import com.example.eurekaclient.common.RedisClient;
 import com.example.eurekaclient.dao.mapper.product.StudentMapper;
 import com.example.eurekaclient.dto.StudentDto;
 import com.example.eurekaclient.service.CommonService;
@@ -11,16 +10,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
-public class StudentServiceImpl implements IStudentService {
+public class StudentServiceImpl extends CommonService implements IStudentService {
 
     @Autowired
     StudentMapper studentMapper;
 
-    @Autowired
-    RedisClient redisClient;
-
-    @Autowired
-    CommonService commonService;
     // 失效时间
     private static final int STUDENT_CACHE_EXPIRES = 2 * 3600;
 
@@ -33,14 +27,14 @@ public class StudentServiceImpl implements IStudentService {
      */
     @Override
     public List<StudentDto> selectStudentList(int offset, int pageSize) {
-        String key = commonService.getStudentCacheKey(offset / pageSize +1);
-        List<StudentDto> list = redisClient.getList(key, StudentDto.class);
+        String key = getStudentCacheKey(offset / pageSize +1);
+        List<StudentDto> list = this.redisClient.getList(key, StudentDto.class);
         if (null == list) {
             list = selectStudentDB(offset, pageSize);
             if (list == null) {
                 list = new ArrayList<>();
             }
-            redisClient.setObject(key, list, STUDENT_CACHE_EXPIRES);
+            this.redisClient.setObject(key, list, STUDENT_CACHE_EXPIRES);
         }
         return list;
     }
