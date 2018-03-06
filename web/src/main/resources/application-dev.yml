@@ -1,0 +1,39 @@
+server:
+  port: 8020
+  sessionTimeout: 15
+  tomcat:
+    max-threads: 800
+    uri-encoding: UTF-8
+
+
+spring:
+  application:
+    name: webviews
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+    mode: HTML5
+    encoding: UTF-8
+    content-type: text/html
+    cache: false
+    excluded-view-names: classpath:/static/
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://root:melo@localhost:8001/eureka/
+
+db:
+  product:
+    url: jdbc:mysql://localhost:3306/dev_erp?useUnicode=true&characterEncoding=utf8
+    username: dev_user
+    password: zxcv123
+
+config:
+  redisServer:
+    - 127.0.0.1:6380
+    - 127.0.0.1:6381
+    - 127.0.0.1:6382
+    - 127.0.0.1:6383
+    - 127.0.0.1:6384
+    - 127.0.0.1:6385
