@@ -8,6 +8,11 @@ server:
 spring:
   application:
     name: eurekaserverprovider
+  mvc:
+    static-path-pattern: /**
+    view:
+      prefix: "/WEB-INF/views/"
+      suffix: ".jsp"
 
 eureka:
   client:

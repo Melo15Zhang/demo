@@ -5,6 +5,7 @@ import com.example.eurekaclient.dto.StudentDto;
 import com.example.eurekaclient.service.IStudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
 
@@ -19,6 +20,18 @@ public class HelloController {
     public Result sayHello(@PathVariable String who){
         String returnStr = "Hey "+who+", what's up man!";
         return Result.successResult(returnStr);
+    }
+
+    @RequestMapping(value ="/hello")
+    public ModelAndView  hello(){
+        String returnStr = "hello";
+        return new ModelAndView("hello");
+    }
+
+    @RequestMapping(value ="/login")
+    public ModelAndView  hello1(){
+        String returnStr = "login";
+        return new ModelAndView("login/login");
     }
 
     @RequestMapping(value ="/dbtest")

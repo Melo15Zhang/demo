@@ -35,6 +35,7 @@ dependencies {
 	compile 'org.springframework.boot:spring-boot-starter-data-redis'
 	compile "org.springframework.boot:spring-boot-starter-web:$springBootVersion"
 	compile 'org.springframework.cloud:spring-cloud-starter-eureka-server'
+	runtime ("org.apache.tomcat.embed:tomcat-embed-jasper")
 	runtime ('mysql:mysql-connector-java:5.1.24')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 }
@@ -44,3 +45,6 @@ dependencyManagement {
 		mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
 	}
 }
+
+
+
