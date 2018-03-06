@@ -5,6 +5,7 @@ server:
     max-threads: 800
     uri-encoding: UTF-8
 
+
 spring:
   application:
     name: eurekaserverprovider
