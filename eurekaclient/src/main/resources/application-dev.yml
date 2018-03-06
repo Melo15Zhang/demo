@@ -4,6 +4,9 @@ server:
   tomcat:
     max-threads: 800
     uri-encoding: UTF-8
+  jsp-servlet:
+    init-parameters:
+      development: true
 
 spring:
   application:
@@ -11,8 +14,8 @@ spring:
   mvc:
     static-path-pattern: /**
     view:
-      prefix: "/WEB-INF/views/"
-      suffix: ".jsp"
+      prefix: /WEB-INF/views/
+      suffix: .jsp
 eureka:
   client:
     serviceUrl:

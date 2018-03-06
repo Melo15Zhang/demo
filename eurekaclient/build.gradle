@@ -22,10 +22,10 @@ repositories {
 	mavenCentral()
 }
 
-
 ext {
 	springCloudVersion = 'Edgware.SR1'
 }
+
 
 dependencies {
 	compile 'com.alibaba:druid:1.0.26'
@@ -38,6 +38,11 @@ dependencies {
 	runtime ("org.apache.tomcat.embed:tomcat-embed-jasper")
 	runtime ('mysql:mysql-connector-java:5.1.24')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
+}
+
+bootRun {
+	//需开启才能使用JSP热部署功能
+	addResources = true
 }
 
 dependencyManagement {

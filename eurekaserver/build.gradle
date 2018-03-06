@@ -22,9 +22,14 @@ repositories {
 	mavenCentral()
 }
 
-
 ext {
 	springCloudVersion = 'Edgware.SR1'
+}
+//使用Tasks-->build-->bootRepackage打jar包
+jar {
+	manifest {
+		attributes 'Main-Class': 'com.example.eurekaserver.EurekaserverApplication'
+	}
 }
 
 dependencies {
