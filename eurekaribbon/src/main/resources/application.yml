@@ -7,7 +7,7 @@ server:
 
 spring:
   application:
-    name: serviceRibbon
+    name: serviceRibbonHystrix
 
 eureka:
   client:
@@ -17,3 +17,5 @@ eureka:
 EUREKASERVERPROVIDER:
   ribbon:
     NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
+
+#访问地址：http://localhost:8180/hystrix，输入http://localhost:8180/hystrix.stream,点击monitor Stream进入监控页面
