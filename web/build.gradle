@@ -23,22 +23,31 @@ repositories {
 	mavenCentral()
 }
 
+ext {
+	springCloudVersion = 'Edgware.SR1'
+}
+
 //使用Tasks-->build-->bootRepackage打jar包
 jar{
 	baseName = "web"
 	version = "1.0.0"
-	manifest {
-		attributes 'Main-Class': 'com.example.eurekaserver.EurekaserverApplication'
-	}
 }
 
-
-
 dependencies {
-	compile('org.springframework.boot:spring-boot-devtools')
-	compile('org.springframework.boot:spring-boot-starter-thymeleaf')
-	compile('org.springframework.boot:spring-boot-starter-web')
-	compile('org.springframework.boot:spring-boot-starter-aop')
-	compile('org.springframework.boot:spring-boot-starter-cache')
+	compile 'org.springframework.cloud:spring-cloud-starter-eureka'
+	compile 'org.springframework.cloud:spring-cloud-starter-ribbon'
+	compile 'org.springframework.cloud:spring-cloud-starter-hystrix'
+	compile 'org.springframework.cloud:spring-cloud-starter-hystrix-dashboard'
+	compile 'org.springframework.boot:spring-boot-starter-thymeleaf'
+	compile 'org.springframework.boot:spring-boot-starter-web'
+	compile 'org.springframework.boot:spring-boot-starter-aop'
+	compile 'org.springframework.boot:spring-boot-starter-cache'
+	compile 'org.springframework.boot:spring-boot-starter-actuator'
 	testCompile('org.springframework.boot:spring-boot-starter-test')
+}
+
+dependencyManagement {
+	imports {
+		mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+	}
 }

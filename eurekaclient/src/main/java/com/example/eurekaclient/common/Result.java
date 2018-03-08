@@ -28,14 +28,22 @@ public class Result {
         result.setData(data);
         return result;
     }
+
     public static Result serverResult() {
         Result result = ResultFactory.getResult(BizCode.SERVER_ERROR_CODE);
         result.setMsg(BizCode.SERVER_ERROR_MSG);
         return result;
     }
+
     public static Result argResult() {
         Result result = ResultFactory.getResult(BizCode.ARG_ERROR_CODE);
         result.setMsg(BizCode.ARG_ERROR_MSG);
+        return result;
+    }
+
+    public static Result argResult(String msg) {
+        Result result = ResultFactory.getResult(BizCode.ARG_ERROR_CODE);
+        result.setMsg(msg);
         return result;
     }
 

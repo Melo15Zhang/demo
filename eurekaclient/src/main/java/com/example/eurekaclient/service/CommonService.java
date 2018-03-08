@@ -10,14 +10,14 @@ public class CommonService{
     @Autowired
     protected RedisClient redisClient;
 
-    private final static String STUDENT_KEY = "student:pageindex:%d";
+    private final static String USER_INFO_KEY = "userinfo:%s";
 
-    public String getStudentCacheKey(int pageSize){
-        return String.format(STUDENT_KEY, pageSize);
+    public String getUserInfoCacheKey(String username){
+        return String.format(USER_INFO_KEY, username);
     }
 
-    public void delStudentCacheKey(int pageSize){
-        String key = getStudentCacheKey(pageSize);
+    public void delUserInfoCacheKey(String username){
+        String key = getUserInfoCacheKey(username);
         redisClient.delete(key);
     }
 

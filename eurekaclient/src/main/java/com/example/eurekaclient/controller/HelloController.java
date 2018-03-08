@@ -1,56 +1,27 @@
 package com.example.eurekaclient.controller;
 
 import com.example.eurekaclient.common.Result;
-import com.example.eurekaclient.dto.StudentDto;
-import com.example.eurekaclient.service.IStudentService;
+import com.example.eurekaclient.dto.UserInfoDto;
+import com.example.eurekaclient.service.IUserInfoService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.ModelAndView;
-
-import java.util.List;
+import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+@RequestMapping(produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
 public class HelloController {
 
     @Autowired
-    IStudentService sStudentService;
-
-    @RequestMapping(value ="/name/{who}")
-    @ResponseBody
-    public Result sayHello(@PathVariable String who){
-        String returnStr = "Hey "+who+", what's up man!";
-        return Result.successResult(returnStr);
-    }
-
-    @RequestMapping(value ="/hello")
-    public ModelAndView  hello(){
-        String returnStr = "hello";
-        return new ModelAndView("hello");
-    }
+    IUserInfoService userInfoService;
 
     @RequestMapping(value ="/login")
-    public ModelAndView  hello1(){
-        String returnStr = "login";
-        return new ModelAndView("login/login");
-    }
-
-    @RequestMapping(value ="/dbtest")
-    @ResponseBody
-    public Result dbtest(@RequestParam(value = "offset",defaultValue = "-1") int offset,
-                         @RequestParam(value = "pageSize",defaultValue = "-1")  int pageSize){
-        if(offset == -1){
-            Result.argResult();
+    public UserInfoDto login(@RequestParam(value = "username",defaultValue = "") String username){
+        if(null == username || "".equals(username)){
+            Result.argResult("用户名参数有误");
         }
-
-        if(pageSize == -1){
-            Result.argResult();
-        }
-
-        try{
-            List<StudentDto> list = sStudentService.selectStudentList(offset,pageSize);
-            return Result.successResult(list);
-        }catch(Exception e){
-            return Result.serverResult();
-        }
+        UserInfoDto userInfoDto =  userInfoService.selectUserInfoDto(username);
+        return userInfoDto;
     }
 }

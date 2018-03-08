@@ -1,10 +1,9 @@
 server:
-  port: 8020
+  port: 8080
   sessionTimeout: 15
   tomcat:
     max-threads: 800
     uri-encoding: UTF-8
-
 
 spring:
   application:
@@ -16,12 +15,7 @@ spring:
     encoding: UTF-8
     content-type: text/html
     cache: false
-    excluded-view-names: classpath:/static/
-
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://root:melo@localhost:8001/eureka/
+    enabled: true
 
 db:
   product:
@@ -29,11 +23,13 @@ db:
     username: dev_user
     password: zxcv123
 
-config:
-  redisServer:
-    - 127.0.0.1:6380
-    - 127.0.0.1:6381
-    - 127.0.0.1:6382
-    - 127.0.0.1:6383
-    - 127.0.0.1:6384
-    - 127.0.0.1:6385
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://root:melo@localhost:8001/eureka/
+
+EUREKASERVERPROVIDER:
+  ribbon:
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
+
+#访问地址：http://localhost:8080/hystrix，输入http://localhost:8080/hystrix.stream,点击monitor Stream进入监控页面

@@ -26,7 +26,6 @@ ext {
 	springCloudVersion = 'Edgware.SR1'
 }
 
-
 dependencies {
 	compile 'com.alibaba:druid:1.0.26'
 	compile 'org.mybatis.spring.boot:mybatis-spring-boot-starter:1.2.0'
@@ -35,14 +34,8 @@ dependencies {
 	compile 'org.springframework.boot:spring-boot-starter-data-redis'
 	compile "org.springframework.boot:spring-boot-starter-web:$springBootVersion"
 	compile 'org.springframework.cloud:spring-cloud-starter-eureka-server'
-	runtime ("org.apache.tomcat.embed:tomcat-embed-jasper")
 	runtime ('mysql:mysql-connector-java:5.1.24')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
-}
-
-bootRun {
-	//需开启才能使用JSP热部署功能
-	addResources = true
 }
 
 dependencyManagement {
