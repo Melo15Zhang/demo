@@ -32,4 +32,7 @@ EUREKASERVERPROVIDER:
   ribbon:
     NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
 
+config:
+  loginUrl: http://EUREKASERVERPROVIDER/login
+
 #访问地址：http://localhost:8080/hystrix，输入http://localhost:8080/hystrix.stream,点击monitor Stream进入监控页面

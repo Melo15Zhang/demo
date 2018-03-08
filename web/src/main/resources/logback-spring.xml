@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<configuration scan="true" scanPeriod="60 seconds">
+<configuration scan="true" scanPeriod="30 seconds">
     <!--默认default-->
     <contextName>logback</contextName>
     <springProfile name="dev">
-        <property name="log.path" value="/data/servicelogs/dev"/>
-    </springProfile>
-    <springProfile name="pre,pro">
-        <property name="log.path" value="/data/servicelogs/log"/>
+        <property name="log.path" value="/data/weblogs/dev"/>
     </springProfile>
 
     <!-- 将日志进行编码后输出到控制台 -->
@@ -45,10 +42,5 @@
         </root>
     </springProfile>
 
-    <springProfile name="pre,pro">
-        <root level="INFO">
-            <appender-ref ref="fileAppender"/>
-        </root>
-    </springProfile>
 
 </configuration>
