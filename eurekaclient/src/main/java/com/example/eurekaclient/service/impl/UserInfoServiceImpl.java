@@ -1,19 +1,19 @@
 package com.example.eurekaclient.service.impl;
 
+import com.example.eurekaclient.common.RedisClient;
 import com.example.eurekaclient.dao.mapper.product.UserInfoMapper;
 import com.example.eurekaclient.dto.UserInfoDto;
-import com.example.eurekaclient.service.CommonService;
 import com.example.eurekaclient.service.IUserInfoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class UserInfoServiceImpl extends CommonService implements IUserInfoService {
+public class UserInfoServiceImpl implements IUserInfoService {
     @Autowired
     UserInfoMapper userInfoMapper;
 
-    // 失效时间
-    private static final int USER_INFO_CACHE_EXPIRES = 2 * 3600;
+    @Autowired
+    RedisClient redisClient;
 
     /**
      * 获取
@@ -24,11 +24,11 @@ public class UserInfoServiceImpl extends CommonService implements IUserInfoServi
     @Override
     public UserInfoDto selectUserInfoDto(String username) {
         String key = getUserInfoCacheKey(username);
-        UserInfoDto userInfoDto = this.redisClient.getObject(key, UserInfoDto.class);
+        UserInfoDto userInfoDto = redisClient.getObject(key, UserInfoDto.class);
         if (null == userInfoDto) {
             userInfoDto = selectUserInfoDB(username);
             if (userInfoDto != null) {
-                this.redisClient.setObject(key, userInfoDto, USER_INFO_CACHE_EXPIRES);
+                redisClient.setObject(key, userInfoDto, USER_INFO_CACHE_EXPIRES);
             }
         }
         return userInfoDto;
