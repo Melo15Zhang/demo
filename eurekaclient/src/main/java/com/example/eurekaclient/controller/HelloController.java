@@ -1,6 +1,7 @@
 package com.example.eurekaclient.controller;
 
 import com.example.eurekaclient.common.Result;
+import com.example.eurekaclient.common.StringUtil;
 import com.example.eurekaclient.dto.UserInfoDto;
 import com.example.eurekaclient.service.IUserInfoService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,7 +19,7 @@ public class HelloController {
 
     @RequestMapping(value ="/login")
     public UserInfoDto login(@RequestParam(value = "username",defaultValue = "") String username){
-        if(null == username || "".equals(username)){
+        if(StringUtil.isNullOrEmpty(username)){
             Result.argResult("用户名参数有误");
         }
         UserInfoDto userInfoDto =  userInfoService.selectUserInfoDto(username);
