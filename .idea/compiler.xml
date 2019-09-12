@@ -13,20 +13,8 @@
       <module name="eureka_test" target="1.8" />
       <module name="eurekaclient_main" target="1.8" />
       <module name="eurekaclient_test" target="1.8" />
-      <module name="eurekafeign_main" target="1.8" />
-      <module name="eurekafeign_test" target="1.8" />
-      <module name="eurekaribbon_main" target="1.8" />
-      <module name="eurekaribbon_test" target="1.8" />
-      <module name="eurekaserver" target="1.8" />
       <module name="eurekaserver_main" target="1.8" />
       <module name="eurekaserver_test" target="1.8" />
-      <module name="hystrix_main" target="1.8" />
-      <module name="hystrix_test" target="1.8" />
-      <module name="task" target="1.8" />
-      <module name="task_main" target="1.8" />
-      <module name="task_test" target="1.8" />
-      <module name="zuul_main" target="1.8" />
-      <module name="zuul_test" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
