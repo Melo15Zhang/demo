@@ -24,18 +24,18 @@ public class LoginServiceImpl implements ILoginService{
 
     @Override
     @HystrixCommand(fallbackMethod = "fallback")
-    public boolean login(String username,String password) {
+    public int login(String username,String password) {
         String param = String.format("?username=%s&password=%s&flag=%b",username,password,true);
         ResponseEntity<UserInfoDto> responseEntity = restTemplate.getForEntity(systemConfig.getLoginUrl()+param,UserInfoDto.class);
         System.out.println("param="+param);
         UserInfoDto userInfoDto = responseEntity.getBody();
         if(null != userInfoDto && userInfoDto.getPassword().equals(password)){
-            return true;
+            return 1;
         }
-        return false;
+        return 2;
     }
 
-    public boolean fallback(String name,String password) {
-        return false;
+    public int fallback(String name,String password) {
+        return 0;
     }
 }

@@ -1,8 +1,8 @@
 package com.example.eurekaclient.configs;
 
 import com.alibaba.fastjson.JSON;
-import com.example.eurekaclient.log.SystemLogger;
-import com.example.eurekaclient.log.SystemLoggerFactory;
+import com.example.eurekaclient.common.log.SystemLogger;
+import com.example.eurekaclient.common.log.SystemLoggerFactory;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 
