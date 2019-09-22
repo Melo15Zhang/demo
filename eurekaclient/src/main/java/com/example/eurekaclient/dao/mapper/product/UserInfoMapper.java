@@ -1,7 +1,7 @@
 package com.example.eurekaclient.dao.mapper.product;
 
 import com.example.eurekaclient.dao.sqlprovider.UserInfoProvider;
-import com.example.eurekaclient.dto.UserInfoDto;
+import com.example.eurekaclient.dto.UserInfoDTO;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.SelectProvider;
@@ -15,5 +15,5 @@ public interface UserInfoMapper {
      * @return
      */
     @SelectProvider(type = UserInfoProvider.class, method = "selectUserInfo")
-    UserInfoDto selectUserInfo(@Param("username") String username);
+    UserInfoDTO selectUserInfo(@Param("username") String username);
 }

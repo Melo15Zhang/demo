@@ -5,7 +5,7 @@
       <GradleProjectSettings>
         <option name="distributionType" value="LOCAL" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="gradleHome" value="D:/gradle/gradle-4.4" />
+        <option name="gradleHome" value="D:/gradle-4.4" />
         <option name="gradleJvm" value="1.8" />
         <option name="modules">
           <set>
@@ -15,8 +15,30 @@
       </GradleProjectSettings>
       <GradleProjectSettings>
         <option name="distributionType" value="LOCAL" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/configclient" />
+        <option name="gradleHome" value="D:/gradle-4.4" />
+        <option name="gradleJvm" value="1.8" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/configclient" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="distributionType" value="LOCAL" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/configserver" />
+        <option name="gradleHome" value="D:/gradle-4.4" />
+        <option name="gradleJvm" value="1.8" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/configserver" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="distributionType" value="LOCAL" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/eurekaclient" />
-        <option name="gradleHome" value="D:/gradle/gradle-4.4" />
+        <option name="gradleHome" value="D:/gradle-4.4" />
         <option name="gradleJvm" value="1.8" />
         <option name="modules">
           <set>
@@ -27,11 +49,22 @@
       <GradleProjectSettings>
         <option name="distributionType" value="LOCAL" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/eurekaserver" />
-        <option name="gradleHome" value="D:/gradle/gradle-4.4" />
+        <option name="gradleHome" value="D:/gradle-4.4" />
         <option name="gradleJvm" value="1.8" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$/eurekaserver" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="distributionType" value="LOCAL" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/web" />
+        <option name="gradleHome" value="D:/gradle-4.4" />
+        <option name="gradleJvm" value="1.8" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/web" />
           </set>
         </option>
       </GradleProjectSettings>

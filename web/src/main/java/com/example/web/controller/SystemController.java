@@ -15,13 +15,17 @@ public class SystemController {
     @RequestMapping("/login")
     public ModelAndView index(@RequestParam(value = "username",defaultValue = "") String username,
                               @RequestParam(value = "password",defaultValue = "") String password) {
-        boolean flag = loginService.login(username,password);
-        if (flag){
+        int flag = loginService.login(username,password);
+        if (flag == 1){
             ModelAndView modelAndView  = new ModelAndView("welcome");
             modelAndView.addObject("userName",username);
             return modelAndView;
-        }else{
+        }else if (flag == 2){
             ModelAndView modelAndView  = new ModelAndView("index");
+            modelAndView.addObject("userName",username);
+            return modelAndView;
+        }else{
+            ModelAndView modelAndView  = new ModelAndView("error");
             return modelAndView;
         }
     }

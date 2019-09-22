@@ -2,6 +2,12 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/configclient.iml" filepath="$PROJECT_DIR$/.idea/modules/configclient.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/configclient_main.iml" filepath="$PROJECT_DIR$/.idea/modules/configclient_main.iml" group="configclient" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/configclient_test.iml" filepath="$PROJECT_DIR$/.idea/modules/configclient_test.iml" group="configclient" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/configserver.iml" filepath="$PROJECT_DIR$/.idea/modules/configserver.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/configserver_main.iml" filepath="$PROJECT_DIR$/.idea/modules/configserver_main.iml" group="configserver" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/configserver_test.iml" filepath="$PROJECT_DIR$/.idea/modules/configserver_test.iml" group="configserver" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/demo.iml" filepath="$PROJECT_DIR$/.idea/modules/demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/eurekaclient.iml" filepath="$PROJECT_DIR$/.idea/modules/eurekaclient.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/eurekaclient_main.iml" filepath="$PROJECT_DIR$/.idea/modules/eurekaclient_main.iml" group="eurekaclient" />
@@ -10,6 +16,9 @@
       <module fileurl="file://$PROJECT_DIR$/eurekaserver/eurekaserver.iml" filepath="$PROJECT_DIR$/eurekaserver/eurekaserver.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/eurekaserver_main.iml" filepath="$PROJECT_DIR$/.idea/modules/eurekaserver_main.iml" group="eurekaserver" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/eurekaserver_test.iml" filepath="$PROJECT_DIR$/.idea/modules/eurekaserver_test.iml" group="eurekaserver" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/web.iml" filepath="$PROJECT_DIR$/.idea/modules/web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/web_main.iml" filepath="$PROJECT_DIR$/.idea/modules/web_main.iml" group="web" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/web_test.iml" filepath="$PROJECT_DIR$/.idea/modules/web_test.iml" group="web" />
     </modules>
   </component>
 </project>
