@@ -1,5 +1,5 @@
 server:
-  port: 8888
+  port: 8080
   sessionTimeout: 15
   tomcat:
     max-threads: 800
