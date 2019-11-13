@@ -5,6 +5,9 @@ server:
     max-threads: 800
     uri-encoding: UTF-8
 
+logging:
+  config: classpath:logback-spring.xml
+
 spring:
   application:
     name: eureka8001

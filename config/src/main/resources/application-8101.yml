@@ -12,6 +12,9 @@ spring:
           uri: https://github.com/Melo15Zhang/config/
           search-paths: config
 
+logging:
+  config: classpath:logback-spring.xml
+
 management:
   security:
     enabled: false
