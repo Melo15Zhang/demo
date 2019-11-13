@@ -8,14 +8,14 @@ import java.util.Map;
  */
 public class ResultFactory {
 
-    private static final Map<Integer,Result> resultMap = new HashMap<>();
+    private static final Map<Integer, Result> resultMap = new HashMap<>();
 
-    public static Result getResult(int code){
+    public static Result getResult(int code) {
         Result result = resultMap.get(code);
 
-        if(result == null){
+        if (result == null) {
             result = new Result(code);
-            resultMap.put(code,result);
+            resultMap.put(code, result);
         }
         return result;
     }

@@ -4,11 +4,17 @@ package com.example.eurekaclient.dto;
  * UserInfoDTO
  */
 public class UserInfoDTO {
-    /** 编号 */
+    /**
+     * 编号
+     */
     private long id;
-    /** 用户名 */
+    /**
+     * 用户名
+     */
     private String username;
-    /** 密码 */
+    /**
+     * 密码
+     */
     private String password;
 
     public long getId() {

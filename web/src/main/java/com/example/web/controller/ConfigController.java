@@ -16,6 +16,6 @@ public class ConfigController {
 
     @RequestMapping("/get")
     public String home() {
-        return "index->" + index +"name->" + name;
+        return "index->" + index + "name->" + name;
     }
 }

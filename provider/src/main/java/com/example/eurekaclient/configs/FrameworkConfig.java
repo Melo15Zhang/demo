@@ -6,6 +6,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
+
 import java.util.List;
 
 /**
@@ -15,7 +16,7 @@ import java.util.List;
 public class FrameworkConfig extends WebMvcConfigurerAdapter {
 
     @Bean
-    public SystemlInterceptor systemlInterceptor(){
+    public SystemlInterceptor systemlInterceptor() {
         return new SystemlInterceptor();
     }
 

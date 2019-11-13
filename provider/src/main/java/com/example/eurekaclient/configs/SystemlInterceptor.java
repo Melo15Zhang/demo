@@ -16,10 +16,10 @@ public class SystemlInterceptor implements HandlerInterceptor {
     private final SystemLogger logger = SystemLoggerFactory.getLogger(getClass());
 
     @Override
-    public boolean preHandle(HttpServletRequest request,HttpServletResponse response,
-            Object handler) throws Exception {
+    public boolean preHandle(HttpServletRequest request, HttpServletResponse response,
+                             Object handler) throws Exception {
         // 处理请求前的内容
-        if(logger.isInfoEnabled()){
+        if (logger.isInfoEnabled()) {
             logger.infoURL(request.getRequestURL().toString());
             logger.infoArgs(JSON.toJSONString(request.getParameterMap()));
         }
@@ -27,12 +27,12 @@ public class SystemlInterceptor implements HandlerInterceptor {
     }
 
     @Override
-    public void postHandle(HttpServletRequest request,HttpServletResponse response,
-            Object handler,ModelAndView modelAndView) throws Exception {
+    public void postHandle(HttpServletRequest request, HttpServletResponse response,
+                           Object handler, ModelAndView modelAndView) throws Exception {
     }
 
     @Override
-    public void afterCompletion(HttpServletRequest request,HttpServletResponse response,
-            Object handler,Exception ex) throws Exception {
+    public void afterCompletion(HttpServletRequest request, HttpServletResponse response,
+                                Object handler, Exception ex) throws Exception {
     }
 }

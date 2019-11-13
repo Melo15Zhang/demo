@@ -20,7 +20,7 @@ public class HelloController {
     @Autowired
     IUserInfoService userInfoService;
 
-    private static int index;
+    private int index;
 
     public int getIndex() {
         return index;
@@ -30,9 +30,9 @@ public class HelloController {
         this.index = index;
     }
 
-    @GetMapping(value ="/login")
-    public Result login(@RequestParam(value = "username",defaultValue = "") String username){
-        if(StringUtil.isNullOrEmpty(username)){
+    @GetMapping(value = "/login")
+    public Result login(@RequestParam(value = "username", defaultValue = "") String username) {
+        if (StringUtil.isNullOrEmpty(username)) {
             Result.argResult("用户名参数有误");
         }
         System.out.println("index->" + index + "被访问---------------------------");

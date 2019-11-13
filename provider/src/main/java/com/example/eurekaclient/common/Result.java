@@ -3,7 +3,7 @@ package com.example.eurekaclient.common;
 public class Result {
     /**
      * 参考 {@link com.example.eurekaclient.common.BizCode}
-     * */
+     */
     private int code;
     private String msg;
     private Object data;
@@ -18,8 +18,8 @@ public class Result {
         this.msg = msg;
     }
 
-    public Result(Integer code, String msg,Object data) {
-        this(code,msg);
+    public Result(Integer code, String msg, Object data) {
+        this(code, msg);
         this.data = data;
     }
 

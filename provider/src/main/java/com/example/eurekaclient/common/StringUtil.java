@@ -30,7 +30,7 @@ public class StringUtil {
         if (!StringUtil.isNullOrEmpty(string)) {
             String[] values = string.split(split);
             for (String str : values) {
-                if (str != "") {
+                if (!"".equals(str)) {
                     valueList.add(str);
                 }
             }

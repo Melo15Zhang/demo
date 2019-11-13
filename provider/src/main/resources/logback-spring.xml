@@ -19,7 +19,9 @@
     <appender name="consoleAppender" class="ch.qos.logback.core.ConsoleAppender">
         <encoder class="ch.qos.logback.core.encoder.LayoutWrappingEncoder">
             <layout class="ch.qos.logback.classic.PatternLayout">
-                <Pattern>{"level":"%level","class":"%logger{40}","line":"%line","msg":"%msg","date":"%d{yyyy-MM-dd HH:mm:ss}"}%n</Pattern>
+                <Pattern>{"level":"%level","class":"%logger{40}","line":"%line","msg":"%msg","date":"%d{yyyy-MM-dd
+                    HH:mm:ss}"}%n
+                </Pattern>
             </layout>
         </encoder>
         <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
@@ -39,7 +41,9 @@
         </rollingPolicy>
         <encoder class="ch.qos.logback.core.encoder.LayoutWrappingEncoder">
             <layout class="ch.qos.logback.classic.PatternLayout">
-                <Pattern>{"level":"%level","class":"%logger{40}","line":"%line","msg":"%msg","date":"%d{yyyy-MM-dd HH:mm:ss}"}%n</Pattern>
+                <Pattern>{"level":"%level","class":"%logger{40}","line":"%line","msg":"%msg","date":"%d{yyyy-MM-dd
+                    HH:mm:ss}"}%n
+                </Pattern>
             </layout>
         </encoder>
     </appender>

@@ -19,10 +19,10 @@ public class SystemLoggerImpl implements SystemLogger {
 
     private Logger logger = null;
 
-    public SystemLoggerImpl(Class<?> cla){
-        if(cla != null){
+    public SystemLoggerImpl(Class<?> cla) {
+        if (cla != null) {
             this.className = cla.getName();
-        }else{
+        } else {
             this.className = DEFAULT_CLASSNAME;
         }
 
@@ -36,7 +36,7 @@ public class SystemLoggerImpl implements SystemLogger {
      */
     @Override
     public void infoURL(String infoURL) {
-        String infoMsg = String.format(URL_LABEL,infoURL);
+        String infoMsg = String.format(URL_LABEL, infoURL);
         logger.info(infoMsg);
     }
 
@@ -47,7 +47,7 @@ public class SystemLoggerImpl implements SystemLogger {
      */
     @Override
     public void infoArgs(String info) {
-        String infoMsg = String.format(ARGS_LABEL,info);
+        String infoMsg = String.format(ARGS_LABEL, info);
         logger.info(infoMsg);
     }
 
@@ -58,7 +58,7 @@ public class SystemLoggerImpl implements SystemLogger {
      */
     @Override
     public void infoReturn(Object infoReturn) {
-        String infoMsg = String.format(RETURN_LABEL,JSON.toJSONString(infoReturn));
+        String infoMsg = String.format(RETURN_LABEL, JSON.toJSONString(infoReturn));
         logger.info(infoMsg);
     }
 
@@ -68,7 +68,7 @@ public class SystemLoggerImpl implements SystemLogger {
      * @return
      */
     @Override
-    public boolean isInfoEnabled(){
+    public boolean isInfoEnabled() {
         return logger.isInfoEnabled();
     }
 
@@ -79,7 +79,7 @@ public class SystemLoggerImpl implements SystemLogger {
      */
     @Override
     public void debugArgs(String debugArgs) {
-        String debugMsg = String.format(ARGS_LABEL,debugArgs);
+        String debugMsg = String.format(ARGS_LABEL, debugArgs);
         logger.debug(debugMsg);
     }
 
@@ -90,7 +90,7 @@ public class SystemLoggerImpl implements SystemLogger {
      */
     @Override
     public void debugReturn(Object debugReturn) {
-        String debugMsg = String.format(RETURN_LABEL,JSON.toJSONString(debugReturn));
+        String debugMsg = String.format(RETURN_LABEL, JSON.toJSONString(debugReturn));
         logger.debug(debugMsg);
     }
 
@@ -100,7 +100,7 @@ public class SystemLoggerImpl implements SystemLogger {
      * @return
      */
     @Override
-    public boolean isDebugEnabled(){
+    public boolean isDebugEnabled() {
         return logger.isDebugEnabled();
     }
 
@@ -111,7 +111,7 @@ public class SystemLoggerImpl implements SystemLogger {
      */
     @Override
     public void error(String error) {
-        String errorMsg = String.format(EX_LABEL,error);
+        String errorMsg = String.format(EX_LABEL, error);
         logger.error(errorMsg);
     }
 
@@ -121,7 +121,7 @@ public class SystemLoggerImpl implements SystemLogger {
      * @return
      */
     @Override
-    public boolean isErrorEnabled(){
+    public boolean isErrorEnabled() {
         return logger.isErrorEnabled();
     }
 }

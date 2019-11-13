@@ -5,7 +5,7 @@ package com.example.eurekaclient.common.log;
  */
 public class SystemLoggerFactory {
 
-    public static SystemLogger getLogger(Class<?> cla){
+    public static SystemLogger getLogger(Class<?> cla) {
         return new SystemLoggerImpl(cla);
     }
 }

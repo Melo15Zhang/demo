@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 @Service
-public class LoginServiceImpl implements ILoginService{
+public class LoginServiceImpl implements ILoginService {
 
     @Autowired
     SystemConfig systemConfig;
@@ -19,23 +19,22 @@ public class LoginServiceImpl implements ILoginService{
     @Autowired
     RestTemplate restTemplate;
 
-        @Autowired
-        LoadBalancerClient loadBalancerClient;
+    @Autowired
+    LoadBalancerClient loadBalancerClient;
 
-        @Override
-        @HystrixCommand(fallbackMethod = "fallback")
-        public int login(String username,String password) {
-            String param = String.format("?username=%s&password=%s&flag=%b",username,password,true);
-            ResponseEntity<UserInfoDto> responseEntity = restTemplate.getForEntity(systemConfig.getLoginUrl()+param,UserInfoDto.class);
-        System.out.println("param="+param);
+    @Override
+    @HystrixCommand(fallbackMethod = "fallback")
+    public int login(String username, String password) {
+        String param = String.format("?username=%s&password=%s&flag=%b", username, password, true);
+        ResponseEntity<UserInfoDto> responseEntity = restTemplate.getForEntity(systemConfig.getLoginUrl() + param, UserInfoDto.class);
         UserInfoDto userInfoDto = responseEntity.getBody();
-        if(null != userInfoDto && userInfoDto.getPassword().equals(password)){
+        if (null != userInfoDto && userInfoDto.getPassword().equals(password)) {
             return 1;
         }
         return 2;
     }
 
-    public int fallback(String name,String password) {
+    public int fallback(String name, String password) {
         return 0;
     }
 }
