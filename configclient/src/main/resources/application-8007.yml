@@ -1,7 +1,0 @@
-server:
-  port: 8007
-  application:
-    name: configclient
-
-# 如果git修改,目前获取的配置仍是缓存的值
-# 客户端通过POST方法触发各自的/refresh 即可完成配置生效

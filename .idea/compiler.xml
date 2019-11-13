@@ -9,18 +9,20 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="config_main" target="1.8" />
+      <module name="config_test" target="1.8" />
       <module name="configclient_main" target="1.8" />
       <module name="configclient_test" target="1.8" />
       <module name="configserver_main" target="1.8" />
       <module name="configserver_test" target="1.8" />
       <module name="eureka_main" target="1.8" />
       <module name="eureka_test" target="1.8" />
-      <module name="eurekaclient_main" target="1.8" />
-      <module name="eurekaclient_test" target="1.8" />
-      <module name="eurekaserver_main" target="1.8" />
-      <module name="eurekaserver_test" target="1.8" />
+      <module name="provider_main" target="1.8" />
+      <module name="provider_test" target="1.8" />
       <module name="web_main" target="1.8" />
       <module name="web_test" target="1.8" />
+      <module name="zuul_main" target="1.8" />
+      <module name="zuul_test" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

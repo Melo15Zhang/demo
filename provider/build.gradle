@@ -17,7 +17,6 @@ apply plugin: 'org.springframework.boot'
 group = 'com.long'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = 1.8
-targetCompatibility = 1.8
 
 repositories {
 	mavenCentral()
@@ -27,23 +26,16 @@ ext {
 	springCloudVersion = 'Edgware.SR1'
 }
 
-//使用Tasks-->build-->bootRepackage打jar包
-jar{
-	baseName = "web"
-	version = "1.0.0"
-}
-
 dependencies {
-	compile 'org.springframework.cloud:spring-cloud-starter-eureka'
-	compile 'org.springframework.cloud:spring-cloud-starter-ribbon'
-	compile 'org.springframework.cloud:spring-cloud-starter-hystrix'
-	compile 'org.springframework.cloud:spring-cloud-starter-hystrix-dashboard'
-	compile 'org.springframework.boot:spring-boot-starter-thymeleaf'
-	compile 'org.springframework.cloud:spring-cloud-starter-config'
-	compile 'org.springframework.boot:spring-boot-starter-web'
-	compile 'org.springframework.boot:spring-boot-starter-aop'
-	compile 'org.springframework.boot:spring-boot-starter-cache'
+	compile 'com.alibaba:druid:1.0.26'
 	compile 'org.springframework.boot:spring-boot-starter-actuator'
+	compile 'org.mybatis.spring.boot:mybatis-spring-boot-starter:1.2.0'
+	compile 'org.springframework.boot:spring-boot-starter-validation'
+	compile 'com.alibaba:fastjson:1.2.32'
+	compile 'org.springframework.cloud:spring-cloud-starter-config'
+	compile "org.springframework.boot:spring-boot-starter-web:$springBootVersion"
+	compile 'org.springframework.cloud:spring-cloud-starter-eureka'
+	runtime ('mysql:mysql-connector-java:5.1.24')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 }
 
@@ -52,3 +44,6 @@ dependencyManagement {
 		mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
 	}
 }
+
+
+

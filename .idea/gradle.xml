@@ -15,45 +15,34 @@
       </GradleProjectSettings>
       <GradleProjectSettings>
         <option name="distributionType" value="LOCAL" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/configclient" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/config" />
         <option name="gradleHome" value="D:/gradle-4.4" />
         <option name="gradleJvm" value="1.8" />
         <option name="modules">
           <set>
-            <option value="$PROJECT_DIR$/configclient" />
+            <option value="$PROJECT_DIR$/config" />
           </set>
         </option>
       </GradleProjectSettings>
       <GradleProjectSettings>
         <option name="distributionType" value="LOCAL" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/configserver" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/eureka" />
         <option name="gradleHome" value="D:/gradle-4.4" />
         <option name="gradleJvm" value="1.8" />
         <option name="modules">
           <set>
-            <option value="$PROJECT_DIR$/configserver" />
+            <option value="$PROJECT_DIR$/eureka" />
           </set>
         </option>
       </GradleProjectSettings>
       <GradleProjectSettings>
         <option name="distributionType" value="LOCAL" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/eurekaclient" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/provider" />
         <option name="gradleHome" value="D:/gradle-4.4" />
         <option name="gradleJvm" value="1.8" />
         <option name="modules">
           <set>
-            <option value="$PROJECT_DIR$/eurekaclient" />
-          </set>
-        </option>
-      </GradleProjectSettings>
-      <GradleProjectSettings>
-        <option name="distributionType" value="LOCAL" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/eurekaserver" />
-        <option name="gradleHome" value="D:/gradle-4.4" />
-        <option name="gradleJvm" value="1.8" />
-        <option name="modules">
-          <set>
-            <option value="$PROJECT_DIR$/eurekaserver" />
+            <option value="$PROJECT_DIR$/provider" />
           </set>
         </option>
       </GradleProjectSettings>

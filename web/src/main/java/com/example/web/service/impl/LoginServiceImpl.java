@@ -19,14 +19,14 @@ public class LoginServiceImpl implements ILoginService{
     @Autowired
     RestTemplate restTemplate;
 
-    @Autowired
-    LoadBalancerClient loadBalancerClient;
+        @Autowired
+        LoadBalancerClient loadBalancerClient;
 
-    @Override
-    @HystrixCommand(fallbackMethod = "fallback")
-    public int login(String username,String password) {
-        String param = String.format("?username=%s&password=%s&flag=%b",username,password,true);
-        ResponseEntity<UserInfoDto> responseEntity = restTemplate.getForEntity(systemConfig.getLoginUrl()+param,UserInfoDto.class);
+        @Override
+        @HystrixCommand(fallbackMethod = "fallback")
+        public int login(String username,String password) {
+            String param = String.format("?username=%s&password=%s&flag=%b",username,password,true);
+            ResponseEntity<UserInfoDto> responseEntity = restTemplate.getForEntity(systemConfig.getLoginUrl()+param,UserInfoDto.class);
         System.out.println("param="+param);
         UserInfoDto userInfoDto = responseEntity.getBody();
         if(null != userInfoDto && userInfoDto.getPassword().equals(password)){

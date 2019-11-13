@@ -1,0 +1,20 @@
+spring:
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: config
+      name: config
+      profile: dev
+      label: master
+
+management:
+  security:
+    enabled: false
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://root:melo@eureka8001:8001/eureka/,http://root:melo@eureka8002:8002/eureka/,http://root:melo@eureka8003:8003/eureka/
+# 如果git修改,目前获取的配置仍是缓存的值
+# 客户端通过POST方法触发各自的/refresh 即可完成配置生效

@@ -3,6 +3,7 @@ package com.example.web.dto;
 /**
  * UserInfoDto
  */
+
 public class UserInfoDto {
     /* 用户名 */
     private String username;

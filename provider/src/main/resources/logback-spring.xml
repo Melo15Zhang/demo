@@ -1,9 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<configuration scan="true" scanPeriod="30 seconds">
+<configuration scan="true" scanPeriod="60 seconds">
     <!--默认default-->
     <contextName>logback</contextName>
-    <springProfile name="8080">
-        <property name="log.path" value="/data/web/log"/>
+    <springProfile name="8010">
+        <property name="log.path" value="/data/provider/log"/>
+        <property name="log.prefix" value="8010"/>
+    </springProfile>
+    <springProfile name="8011">
+        <property name="log.path" value="/data/provider/log"/>
+        <property name="log.prefix" value="8011"/>
+    </springProfile>
+    <springProfile name="8012">
+        <property name="log.path" value="/data/provider/log"/>
+        <property name="log.prefix" value="8012"/>
     </springProfile>
 
     <!-- 将日志进行编码后输出到控制台 -->
@@ -20,7 +29,7 @@
 
     <!-- 将日志输出到文件，当日志内容不断增多时，进行文件切分 -->
     <appender name="fileAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <File>${log.path}/web.log</File>
+        <File>${log.path}/provider-${log.prefix}.log</File>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <FileNamePattern>${log.path}/backup-%d{yyyyMMdd}.log%i</FileNamePattern>
             <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
@@ -35,11 +44,10 @@
         </encoder>
     </appender>
 
-    <springProfile name="8080">
+    <springProfile name="8010,8011,8012">
         <root level="INFO">
             <appender-ref ref="fileAppender"/>
         </root>
     </springProfile>
-
 
 </configuration>

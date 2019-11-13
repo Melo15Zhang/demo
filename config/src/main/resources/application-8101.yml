@@ -1,0 +1,22 @@
+server:
+  port: 8101
+
+spring:
+  application:
+    name: config
+  cloud:
+    config:
+      label: master
+      server:
+        git:
+          uri: https://github.com/Melo15Zhang/config/
+          search-paths: config
+
+management:
+  security:
+    enabled: false
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://root:melo@eureka8001:8001/eureka/,http://root:melo@eureka8002:8002/eureka/,http://root:melo@eureka8003:8003/eureka/
